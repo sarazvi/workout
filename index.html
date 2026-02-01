@@ -6,7 +6,7 @@
     body {
         font-family: 'Poppins', sans-serif; 
         background: url('download.jpeg') no-repeat center center fixed;
-        background-size: cover;
+        background-size: contain;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -67,12 +67,26 @@ function moveNo() {
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
 }
-
-function yesClicked() {
+    function yesClicked() {
+    const messages = [
+        "💪 Let’s crush it today!",
+        "Time to lift heavy and leave no reps behind 🏋️‍♂️",
+        "🔥 Push yourself, no limits!",
+        "🏃‍♀️ Run, sweat, repeat!",
+        "Stronger every set 💪",
+        "Feel the burn, love the gains 🔥",
+        "One more rep, one step closer!",
+        "Sweat now, shine later ✨",
+        "No excuses, just results 💥",
+        "Lift. Run. Repeat. Dominate. 💪"
+    ];
+    const msg = messages[Math.floor(Math.random() * messages.length)];
     document.getElementById("card").innerHTML = `
-        <h1>YAYYY 💕🥰</h1>
-        <p>You just made my Valentine's Day ❤️</p>
+        <h1>YES! 💪</h1>
+        <p>${msg}</p>
     `;
+}
+
 }
 </script>
 
